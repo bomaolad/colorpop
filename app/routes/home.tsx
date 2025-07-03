@@ -1,5 +1,7 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import Header from "../components/Header/Header";
+import Colorpop from "~/components/Colorpop/Colorpop";
+import Footer from "~/components/Footer/Footer";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,6 +11,11 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  // return <Welcome />;
-  return <h1 className="text-3xl font-bold text-center mt-4">Colorpop</h1>;
+  return (
+    <>
+      <Header />
+      <Colorpop />
+      <Footer />
+    </>
+  );
 }
